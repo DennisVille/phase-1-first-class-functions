@@ -1,11 +1,11 @@
-function receivesAFunction(fn=()=>console.log("Hello!")){
+function receivesAFunction(fn){
     fn();
 }
 function returnsANamedFunction(){
     function namedFn(){
         console.log("Hi");
     }
-    return namedFn;
+    return receivesAFunction;
 }
 function returnsAnAnonymousFunction(){
     return function(){console.log("Hello again!")};
